@@ -13,6 +13,6 @@
   ],
   "devDependencies": {
     "angular": "1.2.0-rc.3",
-    "zepto": "~1.0.0"
+    "jquery": "~2.0.3"
   }
 }

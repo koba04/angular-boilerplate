@@ -30,7 +30,7 @@ module.exports = (grunt) ->
     concat:
       vendorJS:
         src: [
-          "bower_components/zepto/zepto.min.js"
+          "bower_components/jquery/jquery.min.js"
           "bower_components/angular/angular.min.js"
         ]
         dest: "public/js/vendor.js"
@@ -75,7 +75,6 @@ module.exports = (grunt) ->
       ]
 
   require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks)
-  grunt.loadNpmTasks "assemble"
 
   grunt.registerTask "coffee2js", ["coffee", "removelogging", "uglify"]
   grunt.registerTask "default", ["configureProxies", "connect:server", "watch"]
