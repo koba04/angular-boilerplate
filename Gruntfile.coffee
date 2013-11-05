@@ -34,6 +34,13 @@ module.exports = (grunt) ->
           "bower_components/angular/angular.min.js"
         ]
         dest: "public/js/vendor.js"
+      template:
+        src: [
+          "template/header.html"
+          "template/controller/**/*.html"
+          "template/footer.html"
+        ]
+        dest: "public/index.html"
 
     removelogging:
       product:
@@ -53,6 +60,9 @@ module.exports = (grunt) ->
       scss:
         files: "scss/**/*.scss"
         tasks: ["compass"]
+      template:
+        files: "template/**/*.html"
+        tasks: ["concat:template"]
     connect:
       server:
         options:
