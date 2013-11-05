@@ -1,0 +1,6 @@
+{
+  "id": #{id},
+  "name": "Sasuke",
+  "age": 15,
+  "message": "I'm Ninja"
+}
