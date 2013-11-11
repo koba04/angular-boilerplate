@@ -32,8 +32,15 @@ module.exports = (grunt) ->
         src: [
           "bower_components/jquery/jquery.min.js"
           "bower_components/angular/angular.min.js"
+          "bower_components/bootstrap/dist/js/bootstrap.min.js"
         ]
         dest: "public/js/vendor.js"
+      vendorCSS:
+        src: [
+          "bower_components/bootstrap/dist/css/bootstrap.min.css"
+          "bower_components/bootstrap/dist/css/bootstrap-theme.min.css"
+        ]
+        dest: "public/css/vendor.css"
       template:
         src: [
           "template/header.html"
@@ -50,6 +57,11 @@ module.exports = (grunt) ->
     uglify:
       product:
         files: "public/js/app.product.js": ["public/js/app.product.js"]
+
+    copy:
+      fonts:
+        src: "bower_components/bootstrap/dist/fonts/*"
+        dest: "public/fonts/"
 
     watch:
       options:
