@@ -1,0 +1,3 @@
+@myapp.controller 'Page2', [ ->
+
+]

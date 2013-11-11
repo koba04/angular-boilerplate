@@ -14,6 +14,8 @@
   "devDependencies": {
     "jquery": "~2.0.3",
     "angular": "~1.2.0",
+    "angular-router": "http://code.angularjs.org/1.2.0/angular-route.js",
+    "angular-animate": "http://code.angularjs.org/1.2.0/angular-animate.js",
     "bootstrap": "~3.0.2"
   }
 }

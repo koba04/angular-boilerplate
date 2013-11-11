@@ -1,1 +1,1 @@
-(function(){}).call(this);
+(function(){this.myapp=angular.module("myapp",["ngRoute","ngAnimate"]),this.myapp.config(["$routeProvider",function(a){return a.when("/page2",{controller:"Page2",templateUrl:"page2.html"}).otherwise({controller:"Top",templateUrl:"top.html"})}])}).call(this),function(){this.myapp.controller("Page2",[function(){}])}.call(this),function(){this.myapp.controller("Top",[function(){}])}.call(this);

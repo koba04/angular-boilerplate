@@ -10,6 +10,7 @@ module.exports = (grunt) ->
         files:
           "public/js/app.js": [
             "coffee/app.coffee"
+            "coffee/controllers/**/*.coffee"
           ]
     compass:
       options:
@@ -30,9 +31,11 @@ module.exports = (grunt) ->
     concat:
       vendorJS:
         src: [
-          "bower_components/jquery/jquery.min.js"
-          "bower_components/angular/angular.min.js"
-          "bower_components/bootstrap/dist/js/bootstrap.min.js"
+          "bower_components/jquery/jquery.js"
+          "bower_components/angular/angular.js"
+          "bower_components/angular-router/index.js"
+          "bower_components/angular-animate/index.js"
+          "bower_components/bootstrap/dist/js/bootstrap.js"
         ]
         dest: "public/js/vendor.js"
       vendorCSS:
@@ -44,7 +47,7 @@ module.exports = (grunt) ->
       template:
         src: [
           "template/header.html"
-          "template/controller/**/*.html"
+          "template/controllers/**/*.html"
           "template/footer.html"
         ]
         dest: "public/index.html"
