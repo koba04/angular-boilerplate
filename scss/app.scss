@@ -1,11 +1,36 @@
 @import "compass/css3";
 
-.view.ng-enter {
-  @include transition-duration(0.5s);
-  @include transition-timing-function(linear);
-  opacity: 0.1;
+.view {
+  &.ng-enter {
+    @include transition-duration(1s);
+    @include transition-timing-function(linear);
+    opacity: 0;
+  }
+  &.ng-enter-active {
+    opacity: 1;
+  }
 }
 
-.view.ng-enter-active {
-  opacity: 1;
+.list-group-item {
+  position: relative;
+  &.ng-enter {
+    @include transition-duration(0.5s);
+    @include transition-timing-function(linear);
+    top: -100px;
+    opacity: 0.5;
+  }
+  &.ng-enter-active {
+    top: 0px;
+    opacity: 1;
+  }
+  &.ng-leave {
+    @include transition-duration(0.5s);
+    @include transition-timing-function(linear);
+    top: 0px;
+    opacity: 1;
+  }
+  &.ng-leave-active {
+    top: -100px;
+    opacity: 0.5;
+  }
 }

@@ -16,11 +16,23 @@
 }).call(this);
 
 (function() {
-  this.myapp.controller('Page2', [function() {}]);
+  this.myapp.controller('Page2', ['$scope', function($scope) {}]);
 
 }).call(this);
 
 (function() {
-  this.myapp.controller('Top', [function() {}]);
+  this.myapp.controller('Top', [
+    '$scope', function($scope) {
+      $scope.list = ["Angular.js", "Backbone.js", "Ember.js", "Knockout.js"];
+      $scope.add = function() {
+        if ($scope.name) {
+          return $scope.list.push($scope.name);
+        }
+      };
+      return $scope["delete"] = function() {
+        return $scope.list.pop();
+      };
+    }
+  ]);
 
 }).call(this);

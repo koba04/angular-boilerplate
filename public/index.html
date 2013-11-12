@@ -16,20 +16,28 @@
   <article class="container">
     <div class="view" ng-view></div>
 
-<script type="text/ng-template" id="top.html">
-<h1>Top</h1>
-<div>This is Top Page</div>
-<a href="#/page2">page2</a>
-</script>
-
 <script type="text/ng-template" id="page2.html">
-<h1>Page2</h1>
-<div>This is Page2</div>
-<a href="#/">top</a>
+<div class="jumbotron">
+  <h1>Page2</h1>
+  <a class="btn btn-lg btn-default" href="#/">Back to Top</a>
+</div>
 </script>
 
-    <footer>
-      @koba04
+<script type="text/ng-template" id="top.html">
+<div class="jumbotron">
+  <h1>ngAnimate Sample</h1>
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="element in list track by $index" >{{element}}</li>
+  </ul>
+  <input type="text" class="form-control" ng-model="name" />
+  <button type="button" class="btn btn-lg btn-primary" ng-click="add()">Add</button>
+  <button type="button" class="btn btn-lg btn-danger" ng-click="delete()">Delete</button>
+  <a class="btn btn-lg btn-default" href="#/page2">Move to Page</a>
+</div>
+</script>
+
+    <footer class="well">
+      <p>@koba04</p>
     </footer>
   </article>
   <script src="/js/vendor.js"></script>

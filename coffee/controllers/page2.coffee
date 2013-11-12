@@ -1,3 +1,2 @@
-@myapp.controller 'Page2', [ ->
-
+@myapp.controller 'Page2', ['$scope', ($scope) ->
 ]

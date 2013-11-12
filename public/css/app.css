@@ -1,5 +1,26 @@
-/* line 3, ../../scss/app.scss */
+/* line 4, ../../scss/app.scss */
 .view.ng-enter {
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+  opacity: 0;
+}
+/* line 9, ../../scss/app.scss */
+.view.ng-enter-active {
+  opacity: 1;
+}
+
+/* line 14, ../../scss/app.scss */
+.list-group-item {
+  position: relative;
+}
+/* line 16, ../../scss/app.scss */
+.list-group-item.ng-enter {
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
@@ -8,10 +29,29 @@
   -moz-transition-timing-function: linear;
   -o-transition-timing-function: linear;
   transition-timing-function: linear;
-  opacity: 0.1;
+  top: -100px;
+  opacity: 0.5;
 }
-
-/* line 9, ../../scss/app.scss */
-.view.ng-enter-active {
+/* line 22, ../../scss/app.scss */
+.list-group-item.ng-enter-active {
+  top: 0px;
   opacity: 1;
+}
+/* line 26, ../../scss/app.scss */
+.list-group-item.ng-leave {
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+  top: 0px;
+  opacity: 1;
+}
+/* line 32, ../../scss/app.scss */
+.list-group-item.ng-leave-active {
+  top: -100px;
+  opacity: 0.5;
 }
