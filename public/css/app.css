@@ -30,7 +30,7 @@
   -o-transition-timing-function: linear;
   transition-timing-function: linear;
   top: -100px;
-  opacity: 0.5;
+  opacity: 0;
 }
 /* line 22, ../../scss/app.scss */
 .list-group-item.ng-enter-active {
@@ -38,6 +38,17 @@
   opacity: 1;
 }
 /* line 26, ../../scss/app.scss */
+.list-group-item.ng-enter-stagger {
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  -webkit-transition-duration: 0;
+  -moz-transition-duration: 0;
+  -o-transition-duration: 0;
+  transition-duration: 0;
+}
+/* line 31, ../../scss/app.scss */
 .list-group-item.ng-leave {
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
@@ -50,7 +61,7 @@
   top: 0px;
   opacity: 1;
 }
-/* line 32, ../../scss/app.scss */
+/* line 37, ../../scss/app.scss */
 .list-group-item.ng-leave-active {
   top: -100px;
   opacity: 0.5;

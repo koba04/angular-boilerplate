@@ -17,12 +17,17 @@
     @include transition-duration(0.5s);
     @include transition-timing-function(linear);
     top: -100px;
-    opacity: 0.5;
+    opacity: 0;
   }
   &.ng-enter-active {
     top: 0px;
     opacity: 1;
   }
+  &.ng-enter-stagger {
+    @include transition-delay(0.5s);
+    @include transition-duration(0);
+  }
+
   &.ng-leave {
     @include transition-duration(0.5s);
     @include transition-timing-function(linear);

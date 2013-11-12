@@ -1,10 +1,9 @@
 @myapp.controller 'Top', ['$scope', ($scope) ->
   $scope.list = [
-    "Angular.js"
-    "Backbone.js"
-    "Ember.js"
-    "Knockout.js"
+    "Bob"
+    "Jim"
   ]
   $scope.add = -> $scope.list.push $scope.name if $scope.name
-  $scope.delete = -> $scope.list.pop()
+  $scope.multiAdd = -> $scope.list.push $scope.name, $scope.name if $scope.name
+  $scope.delete = -> $scope.list.pop() if $scope.list.length
 ]

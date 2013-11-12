@@ -23,14 +23,21 @@
 (function() {
   this.myapp.controller('Top', [
     '$scope', function($scope) {
-      $scope.list = ["Angular.js", "Backbone.js", "Ember.js", "Knockout.js"];
+      $scope.list = ["Bob", "Jim"];
       $scope.add = function() {
         if ($scope.name) {
           return $scope.list.push($scope.name);
         }
       };
+      $scope.multiAdd = function() {
+        if ($scope.name) {
+          return $scope.list.push($scope.name, $scope.name);
+        }
+      };
       return $scope["delete"] = function() {
-        return $scope.list.pop();
+        if ($scope.list.length) {
+          return $scope.list.pop();
+        }
       };
     }
   ]);
